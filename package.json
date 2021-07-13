@@ -1,0 +1,63 @@
+{
+  "name": "twitter",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.2.0",
+    "config": "^3.2.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "path": "^0.12.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-twitter-embed": "^3.0.3",
+    "sequelize": "^5.21.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.14.7",
+    "@babel/preset-env": "^7.6.3",
+    "nodemon": "2.0.2",
+    "sequelize-cli": "^5.5.1"
+  },
+  "scripts": {
+    "startUi": "react-scripts start",
+    "start": "concurrently \"npm run server\" \"react-scripts start\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "NODE_ENV=development NODE_CONFIG_DIR=./src/config/  babel-node app.js",
+    "db:create": "sequelize db:create",
+    "db:migrate": "sequelize db:migrate"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:8081"
+}
